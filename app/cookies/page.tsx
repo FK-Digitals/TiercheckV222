@@ -467,6 +467,9 @@ export default function CookiesPage() {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
+                          Alle ablehnen
+                        </motion.button>
+                        
                         <motion.button
                           onClick={handleAcceptAll}
                           className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
@@ -475,7 +478,7 @@ export default function CookiesPage() {
                         >
                           Alle akzeptieren
                         </motion.button>
-                          Alle ablehnen
+                        
                         <motion.button
                           onClick={handleSavePreferences}
                           className="px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-medium"
@@ -486,7 +489,6 @@ export default function CookiesPage() {
                         </motion.button>
                       </div>
                     </div>
-                        </motion.button>
                     {/* Save Message */}
                     {saveMessage && (
                       <motion.div
