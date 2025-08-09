@@ -124,16 +124,6 @@ export default function DatenschutzPage() {
             <p className="text-blue-700">
               Sie können sich jederzeit bei der zuständigen Datenschutzaufsichtsbehörde beschweren.
             </p>
-          </div>
-
-          <div className="text-sm text-gray-500 pt-8 border-t border-gray-200">
-            <p>Stand: August 2025</p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
             <ul className="list-disc list-inside text-blue-700 space-y-2">
               <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
               <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
