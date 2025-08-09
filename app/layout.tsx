@@ -1,7 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import CookieConsentBanner from './components/CookieConsentBanner';
+import dynamic from 'next/dynamic';
+
+const CookieConsentBanner = dynamic(() => import('./components/CookieConsentBanner'), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ['latin'] });
 
