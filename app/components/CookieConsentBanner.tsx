@@ -36,14 +36,6 @@ export default function CookieConsentBanner() {
       } catch (error) {
         console.error('Error loading cookie preferences:', error);
       }
-    } else {
-      // Load saved preferences
-      try {
-        const savedPreferences = JSON.parse(localStorage.getItem('cookie_preferences') || '{}');
-        setPreferences(prev => ({ ...prev, ...savedPreferences }));
-      } catch (error) {
-        console.error('Error loading cookie preferences:', error);
-      }
     }
   }, [isMounted]); // isMounted is the only dependency
 
@@ -115,14 +107,16 @@ export default function CookieConsentBanner() {
                     🍪 Wir verwenden Cookies
                   </h3>
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    Wir nutzen Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten. 
-                    Einige sind notwendig für die Funktionalität, andere helfen uns dabei, die Website zu verbessern.{' '}
+                    Diese Website verwendet Cookies, um Inhalte zu personalisieren, die Zugriffe zu analysieren und Affiliate-Links zu verarbeiten. 
+                    Nicht essenzielle Cookies (z. B. für Affiliate-Tracking) werden nur nach Ihrer Zustimmung gesetzt. 
+                    Sie können Ihre Auswahl jederzeit in den{' '}
                     <Link 
                       href="/cookies" 
                       className="text-orange-600 hover:text-orange-700 underline font-medium"
                     >
-                      Mehr erfahren
+                      Cookie-Einstellungen
                     </Link>
+                    {' '}ändern.
                   </p>
                 </div>
               </div>

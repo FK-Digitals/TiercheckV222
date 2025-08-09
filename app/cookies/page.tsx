@@ -122,7 +122,7 @@ export default function CookiesPage() {
               Cookie-Richtlinie
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-orange-800 max-w-3xl mx-auto">
-              Informationen über die Verwendung von Cookies auf unserer Website
+              Informationen zu Cookies
             </p>
           </motion.div>
         </div>
@@ -136,18 +136,6 @@ export default function CookiesPage() {
           transition={{ delay: 0.2 }}
           className="bg-white rounded-xl shadow-lg p-8 prose prose-lg max-w-none"
         >
-          {/* Warning Banner */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
-            <div className="flex items-center space-x-2 text-red-800">
-              <Shield size={20} />
-              <span className="font-semibold">WICHTIGER HINWEIS</span>
-            </div>
-            <p className="text-red-700 mt-2 text-sm">
-              Dies ist ein Platzhaltertext! Du musst diese Cookie-Richtlinie durch eine rechtlich korrekte, 
-              auf dein Projekt zugeschnittene Version ersetzen. Konsultiere einen Rechtsanwalt für rechtssichere Texte.
-            </p>
-          </div>
-
           <h2 className="text-2xl font-bold text-orange-900 mb-6">Was sind Cookies?</h2>
           
           <div className="flex items-start space-x-3 mb-6">
@@ -165,7 +153,7 @@ export default function CookiesPage() {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-xl font-semibold text-blue-800 mb-3 flex items-center space-x-2">
                 <Settings size={18} />
-                <span>Notwendige Cookies</span>
+                <span>Essenziell</span>
               </h3>
               <p className="text-blue-700 mb-3">
                 Diese Cookies sind für das Funktionieren der Website unerlässlich und können nicht deaktiviert werden.
@@ -177,23 +165,8 @@ export default function CookiesPage() {
               </ul>
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-green-800 mb-3 flex items-center space-x-2">
-                <Info size={18} />
-                <span>Funktionale Cookies</span>
-              </h3>
-              <p className="text-green-700 mb-3">
-                Diese Cookies ermöglichen erweiterte Funktionen und Personalisierung.
-              </p>
-              <ul className="list-disc list-inside text-green-700 space-y-1">
-                <li>Spracheinstellungen</li>
-                <li>Benutzereinstellungen</li>
-                <li>Personalisierte Inhalte</li>
-              </ul>
-            </div>
-
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-purple-800 mb-3">Analyse-Cookies</h3>
+              <h3 className="text-xl font-semibold text-purple-800 mb-3">Statistik</h3>
               <p className="text-purple-700 mb-3">
                 Diese Cookies helfen uns zu verstehen, wie Besucher mit der Website interagieren.
               </p>
@@ -206,13 +179,13 @@ export default function CookiesPage() {
             </div>
 
             <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-orange-800 mb-3">Marketing-Cookies</h3>
+              <h3 className="text-xl font-semibold text-orange-800 mb-3">Marketing</h3>
               <p className="text-orange-700 mb-3">
-                Diese Cookies werden verwendet, um Werbung relevanter zu gestalten.
+                Diese Cookies werden für Affiliate-Tracking und personalisierte Werbung verwendet.
               </p>
               <ul className="list-disc list-inside text-orange-700 space-y-1">
-                <li>Personalisierte Werbung</li>
                 <li>Affiliate-Tracking</li>
+                <li>Personalisierte Werbung</li>
                 <li>Social Media Integration</li>
               </ul>
             </div>
@@ -232,28 +205,28 @@ export default function CookiesPage() {
               </thead>
               <tbody>
                 <tr>
+                  <td className="border border-gray-300 px-4 py-2 font-mono">awin_trk</td>
+                  <td className="border border-gray-300 px-4 py-2">Affiliate-Tracking (Awin)</td>
+                  <td className="border border-gray-300 px-4 py-2">30 Tage</td>
+                  <td className="border border-gray-300 px-4 py-2">Marketing</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-2 font-mono">ad-id</td>
+                  <td className="border border-gray-300 px-4 py-2">Amazon-Partnercookie</td>
+                  <td className="border border-gray-300 px-4 py-2">24 Stunden</td>
+                  <td className="border border-gray-300 px-4 py-2">Marketing</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 px-4 py-2 font-mono">ad-privacy</td>
+                  <td className="border border-gray-300 px-4 py-2">Amazon-Partnercookie</td>
+                  <td className="border border-gray-300 px-4 py-2">30 Tage</td>
+                  <td className="border border-gray-300 px-4 py-2">Marketing</td>
+                </tr>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 px-4 py-2 font-mono">session_id</td>
                   <td className="border border-gray-300 px-4 py-2">Session-Management</td>
                   <td className="border border-gray-300 px-4 py-2">Session</td>
-                  <td className="border border-gray-300 px-4 py-2">Notwendig</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-mono">preferences</td>
-                  <td className="border border-gray-300 px-4 py-2">Benutzereinstellungen</td>
-                  <td className="border border-gray-300 px-4 py-2">1 Jahr</td>
-                  <td className="border border-gray-300 px-4 py-2">Funktional</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2 font-mono">analytics</td>
-                  <td className="border border-gray-300 px-4 py-2">Website-Analyse</td>
-                  <td className="border border-gray-300 px-4 py-2">2 Jahre</td>
-                  <td className="border border-gray-300 px-4 py-2">Analyse</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 px-4 py-2 font-mono">marketing</td>
-                  <td className="border border-gray-300 px-4 py-2">Personalisierte Werbung</td>
-                  <td className="border border-gray-300 px-4 py-2">30 Tage</td>
-                  <td className="border border-gray-300 px-4 py-2">Marketing</td>
+                  <td className="border border-gray-300 px-4 py-2">Essenziell</td>
                 </tr>
               </tbody>
             </table>
@@ -308,7 +281,7 @@ export default function CookiesPage() {
           </div>
 
           <div className="text-sm text-gray-500 pt-8 border-t border-gray-200">
-            <p>Stand: Januar 2024</p>
+            <p>Stand: August 2025</p>
           </div>
 
           {/* Cookie Settings Section */}
@@ -342,7 +315,7 @@ export default function CookiesPage() {
                     {/* Current Status */}
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                       <h3 className="font-semibold text-blue-800 mb-2">Aktuelle Einstellungen</h3>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <h4 className="font-medium text-gray-900">Essenziell</h4>
                         <div className="flex items-center space-x-2">
                           <Check className="text-green-600" size={16} />
                           <span className="text-blue-700">Notwendig: Aktiv</span>
@@ -354,17 +327,7 @@ export default function CookiesPage() {
                             <X className="text-red-600" size={16} />
                           )}
                           <span className="text-blue-700">
-                            Funktional: {preferences.functional ? 'Aktiv' : 'Inaktiv'}
-                          </span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          {preferences.analytics ? (
-                            <Check className="text-green-600" size={16} />
-                          ) : (
-                            <X className="text-red-600" size={16} />
-                          )}
-                          <span className="text-blue-700">
-                            Analyse: {preferences.analytics ? 'Aktiv' : 'Inaktiv'}
+                            Statistik: {preferences.analytics ? 'Aktiv' : 'Inaktiv'}
                           </span>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -377,57 +340,19 @@ export default function CookiesPage() {
                             Marketing: {preferences.marketing ? 'Aktiv' : 'Inaktiv'}
                           </span>
                         </div>
-                      </div>
+                      {/* Statistics Cookies */}
                     </div>
 
-                    {/* Cookie Categories */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <h4 className="font-medium text-gray-900">Statistik</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {/* Necessary Cookies */}
                       <div className="bg-gray-50 rounded-lg p-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">Notwendige Cookies</h4>
+                              checked={preferences.analytics}
+                              onChange={() => handlePreferenceChange('analytics')}
                           <div className="flex items-center space-x-2">
                             <Check className="text-green-600" size={16} />
                             <span className="text-sm text-green-600 font-medium">Immer aktiv</span>
                           </div>
-                        </div>
-                        <p className="text-sm text-gray-600">
-                          Diese Cookies sind für die Grundfunktionen der Website erforderlich.
-                        </p>
-                      </div>
-
-                      {/* Functional Cookies */}
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">Funktionale Cookies</h4>
-                          <label className="relative inline-flex items-center cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={preferences.functional}
-                              onChange={() => handlePreferenceChange('functional')}
-                              className="sr-only peer"
-                            />
-                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
-                          </label>
-                        </div>
-                        <p className="text-sm text-gray-600">
-                          Ermöglichen erweiterte Funktionen und Personalisierung.
-                        </p>
-                      </div>
-
-                      {/* Analytics Cookies */}
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">Analyse-Cookies</h4>
-                          <label className="relative inline-flex items-center cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={preferences.analytics}
-                              onChange={() => handlePreferenceChange('analytics')}
-                              className="sr-only peer"
-                            />
-                            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
-                          </label>
                         </div>
                         <p className="text-sm text-gray-600">
                           Helfen uns zu verstehen, wie die Website genutzt wird.
@@ -437,7 +362,7 @@ export default function CookiesPage() {
                       {/* Marketing Cookies */}
                       <div className="bg-gray-50 rounded-lg p-4">
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">Marketing-Cookies</h4>
+                          <h4 className="font-medium text-gray-900">Marketing</h4>
                           <label className="relative inline-flex items-center cursor-pointer">
                             <input
                               type="checkbox"
@@ -449,7 +374,7 @@ export default function CookiesPage() {
                           </label>
                         </div>
                         <p className="text-sm text-gray-600">
-                          Werden für personalisierte Werbung verwendet.
+                          Werden für Affiliate-Tracking und personalisierte Werbung verwendet.
                         </p>
                       </div>
                     </div>

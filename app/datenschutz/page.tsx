@@ -40,7 +40,7 @@ export default function DatenschutzPage() {
               Datenschutzerklärung
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-orange-800 max-w-3xl mx-auto">
-              Informationen über die Erhebung und Verarbeitung personenbezogener Daten
+              DSGVO-konform, Stand: August 2025
             </p>
           </motion.div>
         </div>
@@ -54,88 +54,86 @@ export default function DatenschutzPage() {
           transition={{ delay: 0.2 }}
           className="bg-white rounded-xl shadow-lg p-8 prose prose-lg max-w-none"
         >
-          {/* Warning Banner */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
-            <div className="flex items-center space-x-2 text-red-800">
-              <Shield size={20} />
-              <span className="font-semibold">WICHTIGER HINWEIS</span>
-            </div>
-            <p className="text-red-700 mt-2 text-sm">
-              Dies ist ein Platzhaltertext! Du musst diese Datenschutzerklärung durch eine rechtlich korrekte, 
-              auf dein Projekt zugeschnittene Version ersetzen. Konsultiere einen Rechtsanwalt für rechtssichere Texte.
-            </p>
-          </div>
-
-          <h2 className="text-2xl font-bold text-orange-900 mb-6">1. Verantwortlicher</h2>
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Verantwortliche Stelle</h2>
           
           <div className="mb-8">
-            <p className="text-gray-700 mb-4">
-              Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:
-            </p>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p><strong>Tier-Check GmbH</strong></p>
-              <p>Musterstraße 123</p>
-              <p>51375 Leverkusen</p>
+              <p><strong>Nouri IT – Kleingewerbe</strong></p>
+              <p>Inhaber: [Vor- und Nachname einfügen]</p>
+              <p>[Anschrift einfügen]</p>
               <p>Deutschland</p>
-              <p>E-Mail: Tier-Check@outlook.de</p>
+              <p>E-Mail: kf-labs@outlook.de</p>
+              <p>Hosting: united-domains AG, Starnberg, Deutschland</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold text-orange-900 mb-6">2. Erhebung und Verarbeitung personenbezogener Daten</h2>
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Zweck der Verarbeitung</h2>
           
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-orange-800 mb-3 flex items-center space-x-2">
-                <Eye size={18} />
-                <span>Beim Besuch unserer Website</span>
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Beim Aufrufen unserer Website werden durch den auf Ihrem Endgerät zum Einsatz kommenden Browser 
-                automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden 
-                temporär in einem sog. Logfile gespeichert.
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>IP-Adresse des anfragenden Rechners</li>
-                <li>Datum und Uhrzeit des Zugriffs</li>
-                <li>Name und URL der abgerufenen Datei</li>
-                <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
-                <li>Verwendeter Browser und ggf. das Betriebssystem</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-orange-800 mb-3 flex items-center space-x-2">
-                <Database size={18} />
-                <span>Bei der Nutzung unseres Kontaktformulars</span>
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Bei Fragen jeder Art bieten wir Ihnen die Möglichkeit, mit uns über ein auf der Website 
-                bereitgestelltes Formular Kontakt aufzunehmen. Dabei sind folgende Angaben erforderlich:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Name</li>
-                <li>E-Mail-Adresse</li>
-                <li>Betreff</li>
-                <li>Nachricht</li>
-              </ul>
-            </div>
+          <div className="mb-8">
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Bereitstellung und Optimierung des Blogs</li>
+              <li>Beantwortung von Kontaktanfragen</li>
+              <li>Einbindung von Affiliate-Links</li>
+              <li>Technische Sicherheit (Server-Logs)</li>
+            </ul>
           </div>
 
-          <h2 className="text-2xl font-bold text-orange-900 mb-6 mt-8">3. Rechtsgrundlage für die Datenverarbeitung</h2>
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Rechtsgrundlagen der Verarbeitung</h2>
           
-          <p className="text-gray-700 mb-4">
-            Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage der folgenden Rechtsgrundlagen:
+          <div className="mb-8">
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung, z. B. bei Kontaktanfragen)</li>
+              <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung, z. B. bei Affiliate-Cookies)</li>
+              <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, z. B. zur Abwehr von Angriffen)</li>
+            </ul>
+          </div>
+
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Server-Logfiles</h2>
+          
+          <p className="text-gray-700 mb-8">
+            Beim Aufruf dieser Website werden automatisch Informationen erfasst, die Ihr Browser übermittelt (z. B. IP-Adresse, Datum/Uhrzeit, Browsertyp, Betriebssystem). Diese Daten sind nicht bestimmten Personen zuordenbar und dienen ausschließlich der technischen Optimierung und Sicherheit. Eine Speicherung erfolgt max. 7 Tage.
           </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
-            <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</li>
-            <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen)</li>
-          </ul>
 
-          <h2 className="text-2xl font-bold text-orange-900 mb-6 mt-8">4. Ihre Rechte</h2>
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Affiliate-Programme</h2>
+          
+          <div className="space-y-4 mb-8">
+            <p className="text-gray-700">
+              Diese Website nimmt an Partnerprogrammen teil, insbesondere:
+            </p>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Amazon PartnerNet – Amazon EU S.à r.l., 38 avenue John F. Kennedy, L-1855 Luxemburg (Datenschutzerklärung Amazon)</li>
+              <li>Awin AG – Eichhornstraße 3, 10785 Berlin, Deutschland (Datenschutzerklärung Awin)</li>
+            </ul>
+            <p className="text-gray-700">
+              Beim Klick auf einen Affiliate-Link wird ein Cookie durch den jeweiligen Partner gesetzt, um die Herkunft des Kaufes nachvollziehen zu können. Die Speicherung dieser Cookies erfolgt nur mit Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+            </p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Kontaktaufnahme</h2>
+          
+          <p className="text-gray-700 mb-8">
+            Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert. Diese Daten werden nach spätestens 6 Monaten gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.
+          </p>
+
+          <h2 className="text-2xl font-bold text-orange-900 mb-6">Ihre Rechte</h2>
           
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-3">Sie haben folgende Rechte:</h3>
+            <p className="text-blue-700 mb-3">
+              Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht, erteilte Einwilligungen jederzeit zu widerrufen.
+            </p>
+            <p className="text-blue-700">
+              Sie können sich jederzeit bei der zuständigen Datenschutzaufsichtsbehörde beschweren.
+            </p>
+          </div>
+
+          <div className="text-sm text-gray-500 pt-8 border-t border-gray-200">
+            <p>Stand: August 2025</p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
             <ul className="list-disc list-inside text-blue-700 space-y-2">
               <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
               <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
