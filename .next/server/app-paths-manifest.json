@@ -3,5 +3,6 @@
   "/page": "app/page.js",
   "/cookies/page": "app/cookies/page.js",
   "/blog/page": "app/blog/page.js",
+  "/datenschutz/page": "app/datenschutz/page.js",
   "/blog/[slug]/page": "app/blog/[slug]/page.js"
 }
