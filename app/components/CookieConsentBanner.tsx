@@ -26,11 +26,16 @@ export default function CookieConsentBanner() {
     // Check if user has already made a choice
     const consent = localStorage.getItem('cookie_consent');
     if (!consent) {
-      // Show banner after a short delay for better UX
-      const timer = setTimeout(() => {
+      // Show banner immediately if no consent
         setShowBanner(true);
-      }, 1000);
-      return () => clearTimeout(timer);
+    } else {
+      // Load saved preferences
+      try {
+        const savedPreferences = JSON.parse(localStorage.getItem('cookie_preferences') || '{}');
+        setPreferences(prev => ({ ...prev, ...savedPreferences }));
+      } catch (error) {
+        console.error('Error loading cookie preferences:', error);
+      }
     } else {
       // Load saved preferences
       try {
@@ -40,7 +45,7 @@ export default function CookieConsentBanner() {
         console.error('Error loading cookie preferences:', error);
       }
     }
-  }, [isMounted]);
+  }, [isMounted]); // isMounted is the only dependency
 
   const handleAcceptAll = () => {
     const allAccepted = {
