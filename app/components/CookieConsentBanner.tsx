@@ -8,6 +8,7 @@ import { Cookie, X, Settings, Check } from 'lucide-react';
 export default function CookieConsentBanner() {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [preferences, setPreferences] = useState({
     necessary: true, // Always true, cannot be disabled
     functional: false,
@@ -16,6 +17,12 @@ export default function CookieConsentBanner() {
   });
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     // Check if user has already made a choice
     const consent = localStorage.getItem('cookie_consent');
     if (!consent) {
@@ -33,7 +40,7 @@ export default function CookieConsentBanner() {
         console.error('Error loading cookie preferences:', error);
       }
     }
-  }, []);
+  }, [isMounted]);
 
   const handleAcceptAll = () => {
     const allAccepted = {
