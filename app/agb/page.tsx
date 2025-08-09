@@ -95,15 +95,6 @@ export default function AGBPage() {
             Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem Urheberrecht. Jede Vervielfältigung, Bearbeitung oder Verbreitung bedarf der vorherigen schriftlichen Zustimmung des Betreibers oder Rechteinhabers.
           </p>
 
-          <div className="text-sm text-gray-500 pt-8 border-t border-gray-200">
-            <p>Stand: August 2025</p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-
           <h2 className="text-2xl font-bold text-orange-900 mb-6">§ 5 Haftungsausschluss</h2>
           
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
